@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240596912602",
+    "project_id": "remedios-63c7a",
+    "storage_bucket": "remedios-63c7a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240596912602:android:07139020ab8b55952218e3",
+        "android_client_info": {
+          "package_name": "com.firebase.remedios"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnARDIyjwDV6fO_VedvTuH21cHRw6iIJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
