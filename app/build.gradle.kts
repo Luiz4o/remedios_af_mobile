@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation("com.squareup.picasso:picasso:2.71828")
     implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -40,6 +41,8 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.volley)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

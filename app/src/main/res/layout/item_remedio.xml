@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@android:color/black"
+    android:elevation="3dp"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:id="@+id/txtNomeRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Nome Remédio"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtHorarioRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08:00"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp"/>
+
+    <CheckBox
+        android:id="@+id/checkTomado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Tomado"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>
