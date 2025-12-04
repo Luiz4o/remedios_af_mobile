@@ -120,11 +120,5 @@ public class AddRemedioActivity extends AppCompatActivity {
                         Toast.makeText(this, "Erro ao salvar", Toast.LENGTH_SHORT).show()
                 );
 
-        AlarmScheduler.scheduleDailyAlarm(
-                this,
-                nome,
-                horaSelecionada,
-                minutoSelecionado
-        );
     }
 }

@@ -26,13 +26,6 @@
 
         <activity android:name=".AddRemedioActivity" />
 
-        <receiver
-            android:name=".NotificationReceiver"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="your.custom.ACTION" />
-            </intent-filter>
-        </receiver>
 
     </application>
 

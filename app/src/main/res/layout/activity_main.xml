@@ -7,13 +7,6 @@
     tools:context=".MainActivity"
     android:background="@color/black">
 
-    <!-- ======================= -->
-    <!--       TOP BAR           -->
-    <!-- ======================= -->
-
-    <!-- ======================= -->
-    <!--     LISTA DE REMÉDIOS   -->
-    <!-- ======================= -->
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="0dp"
@@ -29,7 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Título -->
         <TextView
             android:id="@+id/txtTitulo"
             android:layout_width="0dp"
@@ -41,7 +33,6 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
-        <!-- Botão de Recompensas -->
         <ImageView
             android:id="@+id/btnRecompensas"
             android:layout_width="32dp"
@@ -61,9 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btnAddRemedio" />
 
-    <!-- ======================= -->
-    <!--  BOTÃO FLUTUANTE ADD    -->
-    <!-- ======================= -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAddRemedio"
         android:layout_width="wrap_content"

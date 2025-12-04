@@ -2,6 +2,8 @@ package com.firebase.remedios;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -98,8 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 .delete()
                 .addOnSuccessListener(unused -> {
 
-                    AlarmScheduler.cancelAlarm(this, r.getNome());
-
                     Toast.makeText(this, "Remédio apagado", Toast.LENGTH_SHORT).show();
                 });
 
@@ -160,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
 
-                    if (jaGanhouHoje) {
+                    if (false) {
                         Toast.makeText(this, "Você já ganhou o Pokémon de hoje!", Toast.LENGTH_LONG).show();
                     } else {
                         gerarPokemonAleatorio();
@@ -182,7 +183,6 @@ public class MainActivity extends AppCompatActivity {
 
                         salvarRecompensa(nome, imagem);
 
-                        // Exibir popup para o usuário
                         mostrarPopupPokemon(nome, imagem);
 
                     } catch (Exception e) { e.printStackTrace(); }
@@ -210,9 +210,22 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("Você ganhou um Pokémon!");
 
         ImageView img = new ImageView(this);
+
+        int largura = (int) (120 * getResources().getDisplayMetrics().density);
+        int altura = (int) (120 * getResources().getDisplayMetrics().density);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(largura, altura);
+        params.gravity = android.view.Gravity.CENTER;
+        img.setLayoutParams(params);
+
         Picasso.get().load(imagemUrl).into(img);
 
-        builder.setView(img);
+        LinearLayout layout = new LinearLayout(this);
+        layout.setPadding(20, 20, 20, 20);
+        layout.setGravity(android.view.Gravity.CENTER);
+        layout.addView(img);
+
+        builder.setView(layout);
         builder.setMessage("Novo Pokémon: " + nome);
 
         builder.setPositiveButton("Ok", null);
